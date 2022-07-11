@@ -107,6 +107,11 @@
                         </div>
                     </section>
                     <button type="submit" class="btn w-100 rounded-pill text-white border-0 h-50" style="background-color: #FF4E3B;">Lanjutkan</button>
+                    @if (Route::has('password.request'))
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            {{ __('Forgot Your Password?') }}
+                        </a>
+                    @endif
                 </form>
                 <span class="text-center my-2" style="font-weight: 500; font-size: 16px; color:#555555;">atau</span>
                 <button type="submit" class="btn w-100 border border-1 rounded-pill d-flex align-items-center">
