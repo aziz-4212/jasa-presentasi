@@ -18,10 +18,14 @@ Route::get('/', function () {
 });
 
 Auth::routes(['verify' => true]);
+Route::prefix('/')->middleware(['auth'])->group(function () {
+    Route::resource('/settings', App\Http\Controllers\ConfigsController::class);
+    Route::resource('/users', App\Http\Controllers\UsersController::class);
+    Route::resource('/master-categories', App\Http\Controllers\MasterCategoriesController::class);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['verified']);
-
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['verified']);
+});
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
