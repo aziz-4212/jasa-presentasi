@@ -25,7 +25,6 @@ class UsersController extends Controller
 
     public function show(User $users)
     {
-        // dd("halo");
         return view('admin.users.show');
     }
 
