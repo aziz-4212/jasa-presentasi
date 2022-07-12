@@ -10,24 +10,24 @@ class MasterCategoriesController extends Controller
 
     public function index()
     {
-        if ($request->ajax()) 
-        {
-            $data = MasterCategories::latest()->get();
-            return Datatables::of($data)
-                ->addIndexColumn()
-                ->addColumn('action', function($row){
+        // if ($request->ajax()) 
+        // {
+        //     $data = MasterCategories::latest()->get();
+        //     return Datatables::of($data)
+        //         ->addIndexColumn()
+        //         ->addColumn('action', function($row){
             
-                    $action = '<a class="btn btn-info" id="show-user" data-toggle="modal" data-id='.$row->id.'>Show</a>
-                    <a class="btn btn-success" id="edit-user" data-toggle="modal" data-id='.$row->id.'>Edit </a>
-                    <meta name="csrf-token" content="{{ csrf_token() }}">
-                    <a id="delete-user" data-id='.$row->id.' class="btn btn-danger delete-user">Delete</a>';
+        //             $action = '<a class="btn btn-info" id="show-user" data-toggle="modal" data-id='.$row->id.'>Show</a>
+        //             <a class="btn btn-success" id="edit-user" data-toggle="modal" data-id='.$row->id.'>Edit </a>
+        //             <meta name="csrf-token" content="{{ csrf_token() }}">
+        //             <a id="delete-user" data-id='.$row->id.' class="btn btn-danger delete-user">Delete</a>';
                 
-                    return $action;
+        //             return $action;
             
-                })
-                ->rawColumns(['action'])
-                ->make(true);
-        }
+        //         })
+        //         ->rawColumns(['action'])
+        //         ->make(true);
+        // }
         return view('master-category.index');
     }
 
