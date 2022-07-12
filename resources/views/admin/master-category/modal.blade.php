@@ -13,8 +13,8 @@
                     <div class="mb-3">
                         <label for="disabledSelect" class="form-label">Publish</label>
                         <select id="disabledSelect" class="form-select">
-                        <option>Publish</option>
-                        <option>Not Publish</option>
+                            <option>Publish</option>
+                            <option>Not Publish</option>
                         </select>
                     </div>
                     <button type="submit" class="btn px-4 py-2 text-white mb-2 w-100" style="background-color: #2F80ED;">Submit</button>
