@@ -27,4 +27,5 @@ Route::prefix('/')->middleware(['auth'])->group(function () {
     })->middleware(['verified']);
 });
 Route::resource('/master-categories', App\Http\Controllers\MasterCategoriesController::class);
+Route::resource('/users', App\Http\Controllers\UsersController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

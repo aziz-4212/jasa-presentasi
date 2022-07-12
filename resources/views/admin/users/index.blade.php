@@ -13,60 +13,49 @@
                 <tr>
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Publish</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Role</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>Category A</td>
-                    <td>Publish</td>
+                    <td>Dummy A</td>
+                    <td>dummy@gmail.com</td>
+                    <td>Admin</td>
                     <td class="d-flex align-items-center gap-2">
+                        <a href="{{route('users.show', [1])}}" class="btn btn-success text-white">Show</a>
                         <a href="" class="btn btn-warning text-white">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>Category B</td>
-                    <td>Publish</td>
+                    <td>Dummy B</td>
+                    <td>dummyb@gmail.com</td>
+                    <td>User</td>
                     <td class="d-flex align-items-center gap-2">
+                        <a href="" class="btn btn-success text-white">Show</a>
                         <a href="" class="btn btn-warning text-white">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>Category 3</td>
-                    <td>Publish</td>
+                    <td>Dummy C</td>
+                    <td>dummyc@gmail.com</td>
+                    <td>User</td>
                     <td class="d-flex align-items-center gap-2">
+                        <a href="" class="btn btn-success text-white">Show</a>
                         <a href="" class="btn btn-warning text-white">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <hr>
-        <!-- Form -->
-        {{-- <form class="mt-5 w-auto mx-auto">
-            <fieldset>
-                <legend>Form</legend>
-                <div class="mb-3">
-                    <label for="nama" class="form-label">Nama</label>
-                    <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama">
-                </div>
-                <div class="mb-3">
-                    <label for="disabledSelect" class="form-label">Status</label>
-                    <select id="disabledSelect" class="form-select">
-                    <option>Aktif</option>
-                    <option>Tidak aktif</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn px-4 py-2 text-white mb-2 w-100" style="background-color: #2F80ED;">Submit</button>
-            </fieldset>
-        </form> --}}
     </div>
 </div>
-@include('master-category.modal')
+@include('admin.users.modal')
+@include('admin.users.delete')
 @endsection

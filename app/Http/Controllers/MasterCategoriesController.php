@@ -28,7 +28,7 @@ class MasterCategoriesController extends Controller
         //         ->rawColumns(['action'])
         //         ->make(true);
         // }
-        return view('master-category.index');
+        return view('admin.master-category.index');
     }
 
     public function create()
@@ -50,7 +50,6 @@ class MasterCategoriesController extends Controller
     {
         //
     }
-
 
     public function update(Request $request, MasterCategories $masterCategories)
     {
