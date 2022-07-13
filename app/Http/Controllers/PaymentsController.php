@@ -14,7 +14,7 @@ class PaymentsController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.payment.index');
     }
 
     /**
@@ -46,7 +46,7 @@ class PaymentsController extends Controller
      */
     public function show(Payments $payments)
     {
-        //
+        return view('admin.payment.show');
     }
 
     /**

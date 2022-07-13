@@ -32,4 +32,5 @@ Route::resource('/settings', App\Http\Controllers\ConfigController::class);
 Route::resource('/roles', App\Http\Controllers\RoleController::class);
 Route::resource('/course', App\Http\Controllers\CoursesController::class);
 Route::resource('/chapter', App\Http\Controllers\ChaptersController::class);
+Route::resource('/payment', App\Http\Controllers\PaymentsController::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
